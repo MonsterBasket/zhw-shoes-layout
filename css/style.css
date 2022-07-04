@@ -19,7 +19,11 @@ img.verif_img {
 
 body {
   background: url(../images/handmadepaper.png);
+  background-repeat: repeat-y;
+  background-repeat: repeat-x;
 }
+
+
 
 h2, h3 {
   margin-bottom: 5px;
@@ -104,13 +108,31 @@ iframe {
   overflow: hidden;
   height: 353px;
 }
+.holiday{
+  grid-area: holiday;
+}
 
 .wrapper {
   width: 960px;
   margin: 0 auto;
 }
 
-.shadow {
+#wood section{
+  margin: 10px;
+}
+
+#wood .wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "holiday holiday holiday"
+  "header header header"
+  "main2 main2 arch"
+  "subShoe1 subShoe2 subShoe3";  
+}
+
+.shadow, .wrapper section {
   box-shadow: 0 3px 10px #333;
 }
 
@@ -118,12 +140,42 @@ iframe {
   font: bold 42px 'Elsie Swash Caps', cursive;
   color: white;
   text-shadow: 0 2px 3px #000;
-  margin: 0 0 10px;
+  margin: 10px 0 0 10px;
+  grid-area: header;
 }
 
-.border_right {
+.mainShoe{
+  grid-area: main2;
+}
+.archiveList{
+  grid-area: arch;
+}
+.subShoe1{
+  grid-area: subShoe1;
+}
+.subShoe2{
+  grid-area: subShoe2;
+}
+.subShoe3{
+  grid-area: subShoe3;
+}
+
+#details .wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footerA {
   border-right: 1px dotted #ccc;
   padding-right: 20px;
+}
+
+.footerA, .footerB{
+  margin: 10px;
+}
+
+footer{
+  background-color: #eff3f2;
 }
 
 .thumbs_up {
@@ -246,8 +298,8 @@ a.gplus:active { background-position: -80px -80px; }
 /********** Content Area **********/
 
 #wood {
-  background-image: url(../images/wood.jpg), url(../images/wood_slice.jpg);
-  background-position: center top, left top;
+  background-image: url(../images/wood.jpg), url(../images/wood_slice2.jpg);
+  background-position: center top, center top;
   background-repeat: no-repeat, repeat-y;
   padding: 30px 0;
 }
