@@ -32,6 +32,9 @@ h2, h3 {
 ul, ol {
   margin-bottom: 10px;
 }
+ul ul{
+  margin-bottom: 0px;
+}
 
 li {
   margin-left: 20px;

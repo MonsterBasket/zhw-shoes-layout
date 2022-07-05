@@ -24,7 +24,8 @@
 
   #socialContainer{
     top:0px;
-    width: 160px;
+    width: 137px;
+    height: 144px;
   }
 
   #social a {
@@ -53,16 +54,37 @@
 
   #social {
     position: absolute;
-    top: 4px;
+    top: 11px;
     right: 5%;
     width: auto;
   }
 
+  #socialContainer{
+    top:0px;
+    width: 76px;
+    height: 35px;
+  }
+
   a.fbook, a.twitt, a.gplus {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/social-icons.png) no-repeat;
+    background-size: 60px;
   }
+
+  a.fbook { background-position: 0 0; }
+  a.fbook:hover { background-position: -20px 0; }
+  a.fbook:active { background-position: -40px 0; }
+
+  a.twitt { background-position: 0 -20px; }
+  a.twitt:hover { background-position: -20px -20px; }
+  a.twitt:active { background-position: -40px -20px; }
+
+  a.gplus { background-position: 0 -40px; }
+  a.gplus:hover { background-position: -20px -40px; }
+  a.gplus:active { background-position: -40px -40px; }
+
 
   #nav_bar {
     position: static;
@@ -87,10 +109,50 @@
     background-position: 0 -5px;
   }
 
-  .col1_left, .col1_mid, .col1_right, .col2_left, .col2_right {
+  .col1_left, .col1_mid, .col1_right, .col2_left, .col2_right { /*these don't exist, I maaaaay have changed them... whoops */
     float: none;
     width: 100%;
     margin: 0 0 20px;
+  }
+
+  #wood .wrapper{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "holiday holiday"
+    "header header"
+    "main2 main2"
+    "arch arch"
+    "subShoe1 subShoe1"
+    "subShoe2 subShoe3";  
+  }
+
+  #archiveHeader{grid-area:archiveHeader;}
+  #a2014h{grid-area: a2014h;} /*names can't start with numbers!!*/
+  #a2014{grid-area: a2014;}   /*that was a painful lesson :( */
+  #a2013h{grid-area: a2013h;}
+  #a2013{grid-area: a2013;}
+  #a2012h{
+    grid-area: a2012h;
+    border-bottom: 1px solid #555;
+    width: 80%;
+    height: 1em;
+  }
+  #a2012h a{
+    text-decoration: none;
+  }
+  #a2012late{grid-area: a2012a;}
+  #a2012early{grid-area: a2012b;}
+
+  .archiveList{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "archiveHeader archiveHeader"
+    "a2014h a2013h"
+    "a2014 a2013"
+    "a2012h a2012h"
+    "a2012a a2012b";
   }
 
   .border_right {
@@ -111,6 +173,10 @@
 
   .wrapper {
     width: 80%;
+  }
+
+  #social {
+    display: none;
   }
 
   #nav_bar {
