@@ -155,6 +155,16 @@
     "a2012a a2012b";
   }
 
+  .subShoe1{
+    display:grid;
+    grid-template-areas:
+    "image text1"
+    "image text2";
+  }
+  .subShoe1 figure{grid-area: image;}
+  .subShoe1 h3{grid-area: text1;}
+  .subShoe1 p{grid-area: text2;}
+
   .border_right {
     border-right: 0;
   }
