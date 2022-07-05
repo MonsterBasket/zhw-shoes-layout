@@ -117,7 +117,6 @@
 
   #wood .wrapper{
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     grid-template-areas: 
     "holiday holiday"
     "header header"
@@ -172,6 +171,28 @@
   .hider {
     display: none;
   }
+  #details .wrapper{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "foota footb"
+    "footc footb";
+  }
+  .footerA{
+    grid-area: foota;
+    border-bottom: 1px dotted #ccc;
+  }
+  .footerB{
+    grid-area: footb;
+    border: 0px;
+  }
+  .footerC{
+    grid-area: footc;
+    padding-top: 20px;
+    margin-top: -9px;
+    border-right: 1px dotted #ccc;
+    padding-right: 20px;
+}
+
 
 }
 
@@ -181,12 +202,36 @@
 
 @media only screen and (max-width: 320px) {
 
-  .wrapper {
-    width: 80%;
-  }
-
   #social {
     display: none;
+  }
+
+  #wood .wrapper{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "holiday"
+    "header"
+    "main2"
+    "arch"
+    "subShoe1"
+    "subShoe2"
+    "subShoe3";  
+  }
+
+  .subShoe1{
+    display:block;
+  }
+
+  #details .wrapper{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "foota"
+    "footb"
+    "footc";
+  }
+
+  .footerA, .footerB, .footerC{
+    border: 0px;
   }
 
   #nav_bar {

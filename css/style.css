@@ -168,12 +168,12 @@ iframe {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.footerA {
+.footerA, .footerB {
   border-right: 1px dotted #ccc;
   padding-right: 20px;
 }
 
-.footerA, .footerB{
+.footerA, .footerB, .footerC{
   margin: 10px;
 }
 
