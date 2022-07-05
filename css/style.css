@@ -265,9 +265,17 @@ footer{
 
 /********** Social Bar **********/
 
-#social {
-  position: fixed;
+#socialContainer{
+  position:absolute;
   top: 200px;
+  right: 0px;
+  width: 43px;
+  height: 2000px;
+}
+
+#social {
+  position: sticky;
+  top: 100px;
   right: 3px;
   width: 40px;
   z-index: 1;
