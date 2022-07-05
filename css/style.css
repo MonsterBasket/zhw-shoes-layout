@@ -135,7 +135,7 @@ iframe {
   "subShoe1 subShoe2 subShoe3";  
 }
 
-.shadow, .wrapper section {
+.wrapper section {
   box-shadow: 0 3px 10px #333;
 }
 
